@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title>lab9</title>
+        <title>lab10</title>
         
 		<!--put your external stylesheet links here-->
 		<link rel="stylesheet" href="css/styles.css">
@@ -13,21 +13,39 @@
 		<script type="text/javascript" src="lib/leaflet/leaflet.js"></script>
 
 		<!--you can also place internal styles here; you would place these within <style> tags-->
+		<style type="text/css">
+         p i {
+            font-weight: normal;
+         }
+		</style>
     </head>
 
     <body>
         <!--put your initial page content here-->
 		<div id="div1">
-		</div>
-		<div id="mapdiv">
-			
+	<p> Q2: The styleAll function is setting up styling parameters for the data/ points. For the Amtrak stations, it is styling the points based on zipcodes. For megacities, it is giving a general style for all the points. Thus, these functions are conditional styling. The Styles variable sets up the overal style, in which the style functions can adapt.</p>
+	<p> Q4: Feature refers to the type of data being used. Layers refers to which feature-layer is being used in the popups (for example zipcodes, or city names).</p>
+	<p> Q5: 'layer.options.fill' is styling the layer's points to either be filled in or not. 'layer.getLatLng' is providing the latitude and longitude of the points.</p>
+	<p> Q6: This changed the styling of the points and drastically increased their size (with a new radius of 80 for each point).</p>	
 		</div>
 		
+		<select class="li-nav" name="mapdropdown" id="mapdropdown" onChange="loadMap(this.value);">
+		<option value="map0" selected="selected" disabled>Load a map</option>
+		<option value='mapa'>Map A</option>
+		<option value='mapb'>Map B</option>
+		</select>
+		
+		<div id="mapdiv">
+		</div>
+	
         <!--you can also use this space for internal scripts; you would place these within <script> tags-->
-
-        
+	
 		
 		<!--put your external script links here-->
         <script type="text/javascript" src="js/main.js"></script>
+
+
     </body>
+
+		
 </html>
